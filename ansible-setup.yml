@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  become: yes
+
+  tasks:
+    - name: Install required apps
+      apt:
+        name: "{{ packages }}"
+        update_cache: yes
+      vars:
+        packages:
+        - vim
+        - zsh
