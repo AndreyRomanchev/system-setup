@@ -3,9 +3,12 @@
   become: yes
 
   tasks:
-    - name: Add Microsoft key for VSCode
+    - name: Add keys for repos
       apt_key:
-        url: https://packages.microsoft.com/keys/microsoft.asc
+        url: "{{ item }}"
+      with_items:
+        - https://packages.cloud.google.com/apt/doc/apt-key.gpg
+        - https://packages.microsoft.com/keys/microsoft.asc
 
     - name: Add external repos
       apt_repository:
@@ -13,6 +16,7 @@
       with_items:
         - deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
         - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+        - deb https://apt.kubernetes.io/ kubernetes-xenial main
 
     - name: Install required apps
       apt:
@@ -20,18 +24,20 @@
         update_cache: yes
       vars:
         packages:
-        - vim
-        - zsh
-        - sysstat
-        - htop
-        - iotop
-        - iftop
-        - lnav
-        - tmux
         - apt-transport-https
         - code
-        - meld
+        - git
+        - htop
+        - iftop
+        - iotop
         - fonts-powerline
-        - shellcheck
-        - pylint
+        - kubectl
+        - lnav
+        - meld
         - pep8
+        - pylint
+        - shellcheck
+        - sysstat
+        - tmux
+        - vim
+        - zsh
