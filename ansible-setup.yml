@@ -47,6 +47,7 @@
         - meld
         - pep8
         - pylint
+        - python-pip
         - shellcheck
         - sysstat
         - tmux
