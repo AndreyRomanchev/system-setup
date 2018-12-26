@@ -3,6 +3,17 @@
   become: yes
 
   tasks:
+    - name: Add Microsoft key for VSCode
+      apt_key:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+
+    - name: Add external repos
+      apt_repository:
+        repo: "{{ item }}"
+      with_items:
+        - deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+        - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+
     - name: Install required apps
       apt:
         name: "{{ packages }}"
@@ -12,4 +23,15 @@
         - vim
         - zsh
         - sysstat
+        - htop
+        - iotop
+        - iftop
         - lnav
+        - tmux
+        - apt-transport-https
+        - code
+        - meld
+        - fonts-powerline
+        - shellcheck
+        - pylint
+        - pep8
