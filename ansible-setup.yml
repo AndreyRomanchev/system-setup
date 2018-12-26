@@ -9,6 +9,7 @@
       with_items:
         - https://packages.cloud.google.com/apt/doc/apt-key.gpg
         - https://packages.microsoft.com/keys/microsoft.asc
+        - https://download.docker.com/linux/ubuntu/gpg
 
     - name: Add external repos
       apt_repository:
@@ -17,6 +18,15 @@
         - deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
         - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
         - deb https://apt.kubernetes.io/ kubernetes-xenial main
+        - deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+
+    - name: Remove apps
+      apt:
+        name: "{{ packages }}"
+        state: absent
+      vars:
+        packages:
+        - hexlet
 
     - name: Install required apps
       apt:
@@ -26,6 +36,7 @@
         packages:
         - apt-transport-https
         - code
+        - docker-ce
         - git
         - htop
         - iftop
@@ -39,5 +50,8 @@
         - shellcheck
         - sysstat
         - tmux
+        - vagrant
         - vim
+        - virtualbox
+        - virtualbox-qt
         - zsh
