@@ -50,6 +50,7 @@
         - lnav
         - meld
         - nmap
+        - nethogs
         - pep8
         - pylint
         - python-pip
