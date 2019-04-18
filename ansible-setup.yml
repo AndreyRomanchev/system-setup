@@ -66,3 +66,7 @@
         - virtualbox
         - virtualbox-qt
         - zsh
+
+    - name: Install pip packages
+      pip:
+        name: bottle
