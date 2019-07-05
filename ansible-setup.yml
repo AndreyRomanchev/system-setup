@@ -59,6 +59,7 @@
         - shellcheck
         - sysstat
         - tilix
+        - tldr
         - tmux
         - ttf-mscorefonts-installer
         - vagrant
