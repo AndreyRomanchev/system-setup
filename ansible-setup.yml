@@ -35,7 +35,6 @@
       vars:
         packages:
         - apt-transport-https
-        - atop
         - chromium-browser
         - clipit
         - code
