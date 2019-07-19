@@ -39,6 +39,7 @@
         - clipit
         - code
         - docker-ce
+        - fonts-firacode
         - git
         - gkrellm
         - golang
