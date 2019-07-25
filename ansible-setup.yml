@@ -44,6 +44,7 @@
         - gkrellm
         - golang
         - htop
+        - httpie
         - iftop
         - iotop
         - fonts-powerline
