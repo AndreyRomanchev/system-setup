@@ -16,7 +16,6 @@
         repo: "{{ item }}"
       with_items:
         - deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
-        - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
         - deb https://apt.kubernetes.io/ kubernetes-xenial main
         - deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
 
@@ -43,7 +42,6 @@
         - git
         - gkrellm
         - gkrelltop
-        #- golang
         - htop
         - httpie
         - iftop

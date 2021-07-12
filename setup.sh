@@ -6,6 +6,7 @@ sudo ansible-playbook ansible-setup.yml
 
 # TODO: oh-my-zsh installing
 # TODO: move to ansible
+# https://habr.com/ru/post/516004/
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 vim .zshrc
