@@ -34,7 +34,6 @@
       vars:
         packages:
         - apt-transport-https
-        - chromium-browser
         - clipit
         - code
         - docker-ce
@@ -59,15 +58,9 @@
         - shellcheck
         - sysstat
         - tilix
-        - tldr
         - tmux
         - ttf-mscorefonts-installer
-        - vagrant
         - vim
         - virtualbox
         - virtualbox-qt
         - zsh
-
-    - name: Install pip packages
-      pip:
-        name: bottle
