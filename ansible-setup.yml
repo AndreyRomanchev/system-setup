@@ -18,6 +18,7 @@
         - deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
         - deb https://apt.kubernetes.io/ kubernetes-xenial main
         - deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+        - ppa:ozmartian/apps
 
     - name: Remove apps
       apt:
@@ -60,6 +61,7 @@
         - tilix
         - tmux
         - ttf-mscorefonts-installer
+        - vidcutter
         - vim
         - virtualbox
         - virtualbox-qt
