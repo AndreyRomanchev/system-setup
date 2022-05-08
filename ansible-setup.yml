@@ -65,4 +65,5 @@
         - vim
         - virtualbox
         - virtualbox-qt
+        - whois
         - zsh
